@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обо мне — RÔWE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── About-page specific styles ── */
+    .about-hero {
+      width: 100%;
+      height: 55vw;
+      max-height: 680px;
+      min-height: 280px;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 48px;
+    }
+
+    .about-label {
+      flex: 0 0 200px;
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding-top: 4px;
+    }
+
+    .about-text p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 18px;
+      max-width: 520px;
+    }
+
+    .about-divider {
+      border: none;
+      border-top: 1.5px solid var(--muted);
+      max-width: 1100px;
+      margin: 0 auto;
+      opacity: 0.5;
+    }
+
+    .meet-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 72px 48px;
+    }
+
+    .meet-photo {
+      flex: 0 0 340px;
+    }
+
+    .meet-photo img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .meet-content {}
+
+    .meet-label {
+      font-family: var(--font-head);
+      font-size: 2.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 28px;
+    }
+
+    .meet-content p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 18px;
+      max-width: 480px;
+    }
+
+    @media (max-width: 820px) {
+      .about-section,
+      .meet-section { flex-direction: column; gap: 28px; padding: 48px 24px; }
+      .about-label { flex: none; }
+      .meet-photo { flex: none; width: 100%; }
+      .meet-photo img { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="about.html" class="active">ABOUT</a>
+        <a href="#">MEN'S STYLE</a>
+        <a href="#">SUBSTACK</a>
+      </div>
+      <div class="nav-logo">
+        <a href="index.html">R&#xD2;WE</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO IMAGE -->
+  <div class="about-hero">
+    <img src="images/vadym.jpg" alt="Vadym" />
+  </div>
+
+  <!-- ABOUT BLOCK -->
+  <div class="about-section">
+    <div class="about-label">ABOUT</div>
+    <div class="about-text">
+      <p>
+        [Название бренда] — это платформа о том, как жить хорошо, не превращая это в шоу.
+        Для тех, кто развивает вкус, который не кричит о себе. Уверенность, которой не нужны
+        свидетели. Стиль, присутствие и образ жизни, которые ощущаются взвешенными, а не
+        реактивными. Это пространство для мужчин, которым нужно направление, а не шум.
+      </p>
+      <p>
+        Здесь вы найдёте архив руководств и курсов, созданных для того, чтобы уточнить ваши
+        стандарты, укрепить ваше присутствие и дать вам более чёткое понимание того, кем вы
+        являетесь в важные моменты.
+      </p>
+    </div>
+  </div>
+
+  <hr class="about-divider" />
+
+  <!-- MEET VADYM BLOCK -->
+  <div class="meet-section">
+    <div class="meet-photo">
+      <img src="images/vadym.jpg" alt="Vadym" />
+    </div>
+    <div class="meet-content">
+      <h2 class="meet-label">MEET<br />VADYM</h2>
+      <p>
+        Столько, сколько себя помню, я обращал внимание на тихие вещи. Почему одни люди
+        чувствуют себя в своей тарелке, а другие — нет. Почему одни комнаты кажутся спокойными,
+        а другие — хаотичными. Как притяжение, вкус и присутствие почти всегда объясняются
+        деталями, которые большинство людей не замечает.
+      </p>
+      <p>
+        [Ваша история — расскажите немного о своём опыте, чем вы занимались, что вас привело
+        к созданию этого проекта.]
+      </p>
+      <p>
+        Здесь всё это объединяется. Не как советы, правила или способ стать кем-то другим —
+        а как перспектива. Та, что оттачивает ваши инстинкты, прояснит ваши решения и помогает
+        вещам встать на место без лишних усилий.
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo">
+          <span class="fl-row">ROW</span>
+          <span class="fl-e">E</span>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <a href="about.html">Обо мне</a>
+          <a href="#" class="link-hidden">Contact</a>
+          <a href="terms.html">Права использования</a>
+          <a href="#" class="link-hidden">Privacy</a>
+        </div>
+        <div class="footer-col">
+          <a href="#" class="link-hidden">Style Guide</a>
+          <a href="#" class="link-hidden">Styling</a>
+          <a href="#" class="link-hidden">Coaching</a>
+          <a href="#" class="link-hidden">Instagram Revival</a>
+        </div>
+        <div class="footer-col">
+          <a href="#" class="link-hidden">Library Pass</a>
+          <a href="#" class="link-hidden">Shop</a>
+          <a href="#" class="link-hidden">Amazon</a>
+          <a href="#" class="link-hidden">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-substack-label">R&#xD2;WE REPORT &bull; SUBSTACK</p>
+        <button class="footer-subscribe">SUBSCRIBE</button>
+        <a href="#" class="footer-member">Member Login</a>
+        <p class="footer-copy">R&#xD2;WE &times; LISA ROSEN &copy; 2026</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

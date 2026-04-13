@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RÔWE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="about.html">ABOUT</a>
+        <a href="#">MEN'S STYLE</a>
+        <a href="#">SUBSTACK</a>
+      </div>
+      <div class="nav-logo">
+        <a href="index.html">R&#xD2;WE</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-photo">
+        <img src="images/vadym.jpg" alt="Vadym" />
+      </div>
+      <div class="hero-card-wrap">
+        <div class="card">
+          <h2 class="card-title">MEN'S<br />COACHING</h2>
+          <p class="card-price"><strong>$3,000 &middot; The Full Rebrand</strong></p>
+          <p class="card-desc">
+            A complete style and image overhaul for the guy who's ready to show up differently.
+            This isn't a mood board. This is a full transformation delivered to your inbox.
+          </p>
+          <div class="email-form">
+            <input
+              type="email"
+              id="emailInput"
+              class="email-input"
+              placeholder="Email"
+              autocomplete="email"
+            />
+            <span class="email-error" id="emailError">Введите корректный email</span>
+            <button class="btn-download" id="downloadBtn">СКАЧАТЬ</button>
+            <p class="success-msg" id="successMsg">Отправлено на вашу почту :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCORDIONS -->
+  <section class="accordions">
+    <div class="accordion-item">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="acc-arrow">&#8250;</span>
+        <span class="acc-label">WHAT'S INCLUDED</span>
+      </button>
+      <div class="accordion-body">
+        <p>Full style analysis, personalized wardrobe guide, color palette, curated shopping list, and a 1:1 strategy session — all delivered to your inbox.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="acc-arrow">&#8250;</span>
+        <span class="acc-label">HOW IT WORKS</span>
+      </button>
+      <div class="accordion-body">
+        <p>After booking, you'll receive a detailed style questionnaire. A complete guide is then built and delivered to your inbox within 7 days.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-btn" aria-expanded="false">
+        <span class="acc-arrow">&#8250;</span>
+        <span class="acc-label">HOW TO PREPARE</span>
+      </button>
+      <div class="accordion-body">
+        <p>Take photos of your current wardrobe, note what you like and don't like, and come with a clear vision of where you want to go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo-wrap">
+        <div class="footer-logo">
+          <span class="fl-row">ROW</span>
+          <span class="fl-e">E</span>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <a href="about.html">Обо мне</a>
+          <a href="#" class="link-hidden">Contact</a>
+          <a href="terms.html">Права использования</a>
+          <a href="#" class="link-hidden">Privacy</a>
+        </div>
+        <div class="footer-col">
+          <a href="#" class="link-hidden">Style Guide</a>
+          <a href="#" class="link-hidden">Styling</a>
+          <a href="#" class="link-hidden">Coaching</a>
+          <a href="#" class="link-hidden">Instagram Revival</a>
+        </div>
+        <div class="footer-col">
+          <a href="#" class="link-hidden">Library Pass</a>
+          <a href="#" class="link-hidden">Shop</a>
+          <a href="#" class="link-hidden">Amazon</a>
+          <a href="#" class="link-hidden">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p class="footer-substack-label">R&#xD2;WE REPORT &bull; SUBSTACK</p>
+        <button class="footer-subscribe">SUBSCRIBE</button>
+        <a href="#" class="footer-member">Member Login</a>
+        <p class="footer-copy">R&#xD2;WE &times; LISA ROSEN &copy; 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
