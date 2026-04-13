@@ -4,8 +4,8 @@
    2. Copy the Form ID from the form URL
    3. Go to Settings → Advanced → Public API Key
    4. Paste both values below
-──────────────────────────────────────────────────── */
-const CK_FORM_ID  = 'YOUR_FORM_ID';   // e.g. '1234567'
+const CK_FORM_ID  = '9323461';
+const CK_API_KEY  = 'upM88gJywQMixnt8jEeHOQ';
 const CK_API_KEY  = 'YOUR_PUBLIC_API_KEY'; // starts with ~32 char string
 
 /* ─── Email validation ─────────────────────────── */
