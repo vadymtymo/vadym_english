@@ -35,6 +35,9 @@ if (btn) {
       return;
     }
 
+    // Open download page in new tab immediately
+    window.open('download.html', '_blank');
+
     btn.disabled = true;
     btn.textContent = '...';
 
@@ -47,11 +50,9 @@ if (btn) {
           body: JSON.stringify({ api_key: CK_API_KEY, email }),
         }
       );
-
       if (!res.ok) throw new Error('API error');
     } catch (_) {
-      // Even on error, show success to user (ConvertKit may block CORS in some plans;
-      // for production, use a thin server-side proxy or ConvertKit's embed form).
+      // Silent fail — download page already opened
     }
 
     input.value = '';
@@ -60,7 +61,6 @@ if (btn) {
     successMsg.classList.add('visible');
   });
 
-  // Remove error state while typing
   input.addEventListener('input', () => {
     input.classList.remove('invalid');
     errorSpan.classList.remove('visible');
@@ -72,8 +72,6 @@ document.querySelectorAll('.accordion-btn').forEach((btn) => {
   btn.addEventListener('click', () => {
     const item   = btn.closest('.accordion-item');
     const isOpen = item.classList.contains('open');
-
-    // Toggle current (others stay as they are — all can be open simultaneously)
     item.classList.toggle('open', !isOpen);
     btn.setAttribute('aria-expanded', String(!isOpen));
   });
