@@ -13,7 +13,7 @@
       font-family: 'DM Sans', sans-serif;
       background: #f4f1ec;
       color: #1a1a1a;
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.6;
     }
 
@@ -22,12 +22,12 @@
     /* ── Header ── */
     .site-header {
       background: #6b1a1a;
-      padding: 18px 40px;
+      padding: 20px 40px;
       text-align: center;
     }
     .site-logo {
       font-family: 'Russo One', sans-serif;
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       color: #fff;
       letter-spacing: 0.06em;
     }
@@ -38,9 +38,9 @@
 
     /* ── Layout ── */
     .page-main {
-      max-width: 980px;
-      margin: 48px auto;
-      padding: 0 24px 80px;
+      max-width: 1020px;
+      margin: 52px auto;
+      padding: 0 28px 80px;
       display: flex;
       gap: 52px;
       align-items: flex-start;
@@ -52,23 +52,23 @@
     .product-hero {
       position: relative;
       width: 100%;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
+      border-radius: 6px;
+      overflow: hidden;
     }
     .product-hero img {
       width: 100%;
-      height: 340px;
-      object-fit: cover;
-      object-position: center top;
+      height: auto;
       display: block;
     }
     .product-hero-overlay {
       position: absolute;
       bottom: 0; left: 0; right: 0;
-      background: linear-gradient(transparent, rgba(107,26,26,0.82));
-      padding: 48px 20px 16px;
+      background: linear-gradient(transparent, rgba(107,26,26,0.80));
+      padding: 52px 20px 18px;
     }
     .product-hero-label {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -77,46 +77,46 @@
 
     .product-title {
       font-family: 'Russo One', sans-serif;
-      font-size: 1.85rem;
+      font-size: 2.1rem;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.02em;
       line-height: 1.2;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
     .product-subtitle {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 600;
       color: #3a3530;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
     .product-body {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.75;
       color: #3a3530;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
     .section-heading {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 700;
-      margin: 26px 0 12px;
+      margin: 28px 0 14px;
     }
     .product-list {
       list-style: disc;
-      padding-left: 20px;
-      margin-bottom: 8px;
+      padding-left: 22px;
+      margin-bottom: 10px;
     }
     .product-list li {
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.65;
       color: #3a3530;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
     .product-list li strong { color: #1a1a1a; font-weight: 600; }
 
     .terms-link {
       display: inline-block;
-      margin-top: 36px;
+      margin-top: 40px;
       font-size: 12px;
       font-weight: 500;
       text-decoration: underline;
@@ -126,44 +126,44 @@
 
     /* ── Right: checkout card ── */
     .checkout-col {
-      flex: 0 0 310px;
+      flex: 0 0 330px;
       position: sticky;
       top: 32px;
     }
     .checkout-card {
       background: #fff;
       border: 1px solid #ddd9d2;
-      border-radius: 6px;
+      border-radius: 8px;
       overflow: hidden;
     }
 
     /* Product row */
     .card-product {
       display: flex;
-      gap: 12px;
+      gap: 14px;
       align-items: flex-start;
-      padding: 16px;
+      padding: 18px;
       border-bottom: 1px solid #edeae4;
     }
     .card-thumb {
-      flex: 0 0 78px;
-      height: 58px;
+      flex: 0 0 82px;
+      height: 62px;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 5px;
     }
     .card-thumb img {
       width: 100%; height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center center;
     }
     .card-product-name {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       line-height: 1.4;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
     .card-product-price {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.05em;
       color: #888;
@@ -179,15 +179,15 @@
 
     /* Summary section */
     .card-section {
-      padding: 16px;
+      padding: 18px;
       border-bottom: 1px solid #edeae4;
     }
     .card-section-title {
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
     .summary-row {
       display: flex;
@@ -215,41 +215,78 @@
       margin-right: 6px;
     }
 
+    /* Email section */
+    .card-email-section {
+      padding: 18px;
+      border-bottom: 1px solid #edeae4;
+    }
+    .card-email-section .card-section-title {
+      margin-bottom: 12px;
+    }
+    .ck-email-input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid #ddd9d2;
+      border-radius: 5px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      background: #faf9f7;
+      color: #1a1a1a;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .ck-email-input::placeholder { color: #aaa; }
+    .ck-email-input:focus { border-color: #6b1a1a; }
+    .ck-email-input.invalid { border-color: #6b1a1a; }
+    .ck-email-error {
+      display: none;
+      font-size: 12px;
+      color: #6b1a1a;
+      margin-top: 6px;
+    }
+    .ck-email-error.visible { display: block; }
+
     /* Action */
-    .card-action { padding: 16px; }
+    .card-action { padding: 18px; }
 
     .download-btn {
       display: block;
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       background: #1a1a1a;
       color: #fff;
       text-align: center;
       font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       border: none;
-      border-radius: 4px;
+      border-radius: 5px;
       cursor: pointer;
       transition: background 0.2s;
-      text-decoration: none;
     }
     .download-btn:hover { background: #3a3530; }
+    .download-btn:disabled { opacity: 0.6; cursor: not-allowed; }
 
     .card-note {
       text-align: center;
-      font-size: 11.5px;
+      font-size: 12px;
       color: #999;
-      margin-top: 10px;
+      margin-top: 12px;
+      line-height: 1.5;
     }
 
     /* ── Responsive ── */
-    @media (max-width: 720px) {
-      .page-main { flex-direction: column; gap: 32px; }
+    @media (max-width: 760px) {
+      .page-main { flex-direction: column; gap: 36px; margin: 32px auto; }
       .checkout-col { flex: none; width: 100%; position: static; }
+      .product-title { font-size: 1.6rem; }
+    }
+    @media (max-width: 480px) {
+      .site-header { padding: 16px 20px; }
+      .site-logo { font-size: 2.2rem; }
+      .page-main { padding: 0 16px 60px; }
       .product-title { font-size: 1.4rem; }
-      .product-hero img { height: 240px; }
     }
   </style>
 </head>
@@ -266,7 +303,7 @@
     <div class="product-col">
 
       <div class="product-hero">
-        <img src="images/vadym.jpg" alt="Вадим" />
+        <img src="images/guide.jpg" alt="Путеводитель по Small Talk" />
         <div class="product-hero-overlay">
           <span class="product-hero-label">ВАДИМ &middot; АНГЛИЙСКИЙ ГИД</span>
         </div>
@@ -287,7 +324,7 @@
       </ul>
 
       <h2 class="section-heading">Что происходит дальше?</h2>
-      <p class="product-body">Нажми кнопку и скачай гид прямо сейчас. Читай в удобном темпе: всё написано просто, без учебников и грамматики. Попробуй одну фразу сегодня — и почувствуй разницу.</p>
+      <p class="product-body">Введи email, нажми кнопку и скачай гид прямо сейчас. Читай в удобном темпе: всё написано просто, без учебников и грамматики. Попробуй одну фразу сегодня — и почувствуй разницу.</p>
 
       <a href="terms.html" class="terms-link">Права использования</a>
     </div>
@@ -298,7 +335,7 @@
 
         <div class="card-product">
           <div class="card-thumb">
-            <img src="images/vadym.jpg" alt="Гид" />
+            <img src="images/guide.jpg" alt="Гид" />
           </div>
           <div>
             <div class="card-product-name">Английский гид: живой разговор</div>
@@ -318,15 +355,78 @@
           </div>
         </div>
 
+        <div class="card-email-section">
+          <div class="card-section-title">Ваш email</div>
+          <input
+            type="email"
+            id="ckEmail"
+            class="ck-email-input"
+            placeholder="your@email.com"
+            autocomplete="email"
+          />
+          <p class="ck-email-error" id="ckEmailError">Введите корректный email</p>
+        </div>
+
         <div class="card-action">
-          <a href="https://drive.google.com/file/d/105mYfrI1OwO8JsKfA47jJ-tLpqjGNvgB/view" target="_blank" class="download-btn">Скачать гид</a>
-          <p class="card-note">🔒 Ссылка также отправлена вам на почту</p>
+          <button id="dlBtn" class="download-btn">Скачать гид</button>
+          <p class="card-note">Ссылка также будет отправлена на вашу почту</p>
         </div>
 
       </div>
     </div>
 
   </main>
+
+  <script>
+    const CK_FORM_ID = '9323461';
+    const CK_API_KEY = 'upM88gJywQMixnt8jEeHOQ';
+
+    function isValidEmail(e) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim());
+    }
+
+    const dlBtn      = document.getElementById('dlBtn');
+    const emailInput = document.getElementById('ckEmail');
+    const emailError = document.getElementById('ckEmailError');
+
+    dlBtn.addEventListener('click', async () => {
+      const email = emailInput.value.trim();
+
+      emailInput.classList.remove('invalid');
+      emailError.classList.remove('visible');
+
+      if (!isValidEmail(email)) {
+        emailInput.classList.add('invalid');
+        emailError.classList.add('visible');
+        emailInput.focus();
+        return;
+      }
+
+      window.open('https://drive.google.com/file/d/105mYfrI1OwO8JsKfA47jJ-tLpqjGNvgB/view', '_blank');
+
+      dlBtn.disabled = true;
+      dlBtn.textContent = '...';
+
+      try {
+        await fetch(
+          `https://api.convertkit.com/v3/forms/${CK_FORM_ID}/subscribe`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: CK_API_KEY, email }),
+          }
+        );
+      } catch (_) {}
+
+      dlBtn.textContent = 'Скачать гид';
+      dlBtn.disabled = false;
+    });
+
+    emailInput.addEventListener('input', () => {
+      emailInput.classList.remove('invalid');
+      emailError.classList.remove('visible');
+    });
+  </script>
 
 </body>
 </html>
