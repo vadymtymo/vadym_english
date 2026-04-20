@@ -225,25 +225,6 @@
     }
     .ck-email-error.visible { display: block; }
 
-    .subscribe-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 12px;
-    }
-    .subscribe-row input[type="checkbox"] {
-      width: 15px;
-      height: 15px;
-      accent-color: #6b1a1a;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-    .subscribe-row label {
-      font-size: 13px;
-      color: #555;
-      cursor: pointer;
-      line-height: 1.4;
-    }
 
     /* ─ Summary ─ */
     .summary-line {
@@ -398,10 +379,6 @@
             autocomplete="email"
           />
           <p class="ck-email-error" id="ckEmailError">Введите корректный email</p>
-          <div class="subscribe-row">
-            <input type="checkbox" id="ckSubscribe" checked />
-            <label for="ckSubscribe">Подписаться на рассылку</label>
-          </div>
         </div>
 
         <!-- Summary -->
@@ -447,7 +424,6 @@
     const dlBtn      = document.getElementById('dlBtn');
     const emailInput = document.getElementById('ckEmail');
     const emailError = document.getElementById('ckEmailError');
-    const subscribe  = document.getElementById('ckSubscribe');
 
     dlBtn.addEventListener('click', async () => {
       const email = emailInput.value.trim();
@@ -467,18 +443,16 @@
       dlBtn.disabled = true;
       dlBtn.textContent = '...';
 
-      if (subscribe.checked) {
-        try {
-          await fetch(
-            `https://api.convertkit.com/v3/forms/${CK_FORM_ID}/subscribe`,
-            {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ api_key: CK_API_KEY, email }),
-            }
-          );
-        } catch (_) {}
-      }
+      try {
+        await fetch(
+          `https://api.convertkit.com/v3/forms/${CK_FORM_ID}/subscribe`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: CK_API_KEY, email }),
+          }
+        );
+      } catch (_) {}
 
       dlBtn.textContent = 'Скачать гид';
       dlBtn.disabled = false;
