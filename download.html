@@ -301,6 +301,20 @@
     .download-btn:hover { background: #333; }
     .download-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
+    .success-msg {
+      display: none;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2a7a2a;
+      background: #f0faf0;
+      border: 1px solid #b6ddb6;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-top: 12px;
+    }
+    .success-msg.visible { display: block; }
+
     .secure-note {
       display: flex;
       align-items: center;
@@ -413,6 +427,7 @@
         <!-- Action -->
         <div class="card-action">
           <button id="dlBtn" class="download-btn">Скачать гид</button>
+          <p class="success-msg" id="successMsg">✓ Проверьте почту — мы отправили вам ссылку!</p>
           <div class="secure-note">
             <svg width="11" height="13" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 0C4.343 0 3 1.343 3 3v1H1.5A1.5 1.5 0 0 0 0 5.5v7A1.5 1.5 0 0 0 1.5 14h9A1.5 1.5 0 0 0 12 12.5v-7A1.5 1.5 0 0 0 10.5 4H9V3C9 1.343 7.657 0 6 0zm0 1.5A1.5 1.5 0 0 1 7.5 3v1h-3V3A1.5 1.5 0 0 1 6 1.5zm0 5.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="#999"/>
@@ -437,12 +452,14 @@
     const dlBtn      = document.getElementById('dlBtn');
     const emailInput = document.getElementById('ckEmail');
     const emailError = document.getElementById('ckEmailError');
+    const successMsg = document.getElementById('successMsg');
 
     dlBtn.addEventListener('click', async () => {
       const email = emailInput.value.trim();
 
       emailInput.classList.remove('invalid');
       emailError.classList.remove('visible');
+      successMsg.classList.remove('visible');
 
       if (!isValidEmail(email)) {
         emailInput.classList.add('invalid');
@@ -450,8 +467,6 @@
         emailInput.focus();
         return;
       }
-
-      window.open('https://drive.google.com/file/d/105mYfrI1OwO8JsKfA47jJ-tLpqjGNvgB/view', '_blank');
 
       dlBtn.disabled = true;
       dlBtn.textContent = '...';
@@ -467,8 +482,10 @@
         );
       } catch (_) {}
 
-      dlBtn.textContent = 'Скачать гид';
-      dlBtn.disabled = false;
+      dlBtn.textContent = 'Отправлено';
+      dlBtn.disabled = true;
+      emailInput.value = '';
+      successMsg.classList.add('visible');
     });
 
     emailInput.addEventListener('input', () => {
