@@ -253,12 +253,13 @@ function submitLead(){
     method: 'POST',
     headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
     body: JSON.stringify({
-      name: name,
-      email: email,
-      situation_category: cat,
-      situation_description: desc,
-      _subject: 'Новый лид: ' + name + ' — ' + cat
-    })
+  name: name,
+  email: email,
+  situation_category: cat,
+  situation_description: desc,
+  _subject: 'Новый лид: ' + name + ' — ' + cat,
+  _replyto: email
+})
   }).catch(function(){});
 
   // ── OPTIONAL: Kit integration ──────────────────────────────────────────
