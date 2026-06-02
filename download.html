@@ -14,7 +14,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#fff;color:#111;-webk
 .brand{color:#fff;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 
 /* PAGE */
-.page{max-width:720px;margin:0 auto;padding:0 24px 80px;display:flex;flex-direction:column;align-items:center}
+.page{max-width:720px;margin:0 auto;padding:0 24px 80px;display:flex;flex-direction:column;align-items:center;min-height:100vh;}
 
 /* HEADLINE */
 .headline{font-size:clamp(22px,4.5vw,42px);font-weight:900;color:#111;line-height:1.1;text-align:center;padding:32px 0 24px;letter-spacing:-.01em;max-width:640px}
@@ -140,6 +140,8 @@ textarea.inp::placeholder{text-transform:none;letter-spacing:0;font-size:13px;co
     <div class="step active" id="s0">
   <div class="step-q">Как вас <strong>зовут?</strong></div>
   <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
+      <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
+<input class="inp" type="text" id="inp-lastname" placeholder="Фамилия"/>
   <input class="inp" type="text" id="inp-lastname" placeholder="Фамилия"/>
   <div class="field-err" id="e0">Пожалуйста, введите ваше имя.</div>
   <button class="btn" onclick="goNext(0)">Продолжить →</button>
@@ -283,7 +285,7 @@ function submitLead(){
   document.getElementById('proof').style.display='none';
   document.getElementById('cong-name').textContent=name;
   document.getElementById('cong').style.display='block';
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo(0,0);
 }
 
 </script>
