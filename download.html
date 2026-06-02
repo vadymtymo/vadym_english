@@ -140,8 +140,6 @@ textarea.inp::placeholder{text-transform:none;letter-spacing:0;font-size:13px;co
     <div class="step active" id="s0">
   <div class="step-q">Как вас <strong>зовут?</strong></div>
   <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
-      <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
-<input class="inp" type="text" id="inp-lastname" placeholder="Фамилия"/>
   <input class="inp" type="text" id="inp-lastname" placeholder="Фамилия"/>
   <div class="field-err" id="e0">Пожалуйста, введите ваше имя.</div>
   <button class="btn" onclick="goNext(0)">Продолжить →</button>
@@ -226,7 +224,7 @@ function goNext(step){
   document.getElementById('s'+step).classList.remove('active');
   document.getElementById('s'+(step+1)).classList.add('active');
   setDots(step+1);
-  window.scrollTo({top:0,behavior:'smooth'});
+ window.scrollTo(0,0);
 }
 
 function goBack(step){
@@ -234,7 +232,7 @@ function goBack(step){
   document.getElementById('s'+step).classList.remove('active');
   document.getElementById('s'+(step-1)).classList.add('active');
   setDots(step-1);
-  window.scrollTo({top:0,behavior:'smooth'});
+  window.scrollTo(0,0);
 }
 
 document.getElementById('inp-name').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();goNext(0);}});
