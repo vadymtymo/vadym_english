@@ -138,11 +138,12 @@ textarea.inp::placeholder{text-transform:none;letter-spacing:0;font-size:13px;co
   <div class="form-wrap">
 
     <div class="step active" id="s0">
-      <div class="step-q">Как вас <strong>зовут?</strong></div>
-      <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
-      <div class="field-err" id="e0">Пожалуйста, введите ваше имя.</div>
-      <button class="btn" onclick="goNext(0)">Продолжить →</button>
-    </div>
+  <div class="step-q">Как вас <strong>зовут?</strong></div>
+  <input class="inp" type="text" id="inp-name" placeholder="Имя"/>
+  <input class="inp" type="text" id="inp-lastname" placeholder="Фамилия"/>
+  <div class="field-err" id="e0">Пожалуйста, введите ваше имя.</div>
+  <button class="btn" onclick="goNext(0)">Продолжить →</button>
+</div>
 
     <div class="step" id="s1">
       <div class="step-q">Куда <strong>отправить</strong> список?</div>
